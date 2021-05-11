@@ -1,16 +1,18 @@
 main {
   column-count: 3;
+  -webkit-column-count: 3;
   margin: 32px 40px 40px 40px;
+  -webkit-column-gap: 32px;
   column-gap: 32px;
-  & .content {
+  .content {
     display: inline-block;
     line-height: 40px;
     margin-bottom: 64px;
 
-    & .image-container {
+    .image-container {
       position: relative;
 
-      & .image-description {
+      .image-description {
         position: absolute;
         line-height: 40px;
         text-align: center;
@@ -25,10 +27,10 @@ main {
         background-color: #ff565c;
       }
     }
-    & .image-container img {
+    .image-container img {
       width: 100%;
     }
-    & .sm {
+    .sm {
       min-height: 200px;
     }
     & .big {

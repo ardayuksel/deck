@@ -36,6 +36,7 @@ footer {
 }
 .footer-links {
   -webkit-column-count: 2;
+  column-count: 2;
   a {
     display: block;
     margin-bottom: 30px;
@@ -65,11 +66,14 @@ footer {
 }
 .input-text {
   width: 180px;
+  font-family: "Lato";
+  color: rgba(29, 31, 36, 0.4);
   height: 35px;
   outline: none;
   line-height: 24px;
   padding-left: 10px;
 }
+
 .input-button {
   width: 120px;
   margin-left: -6px;
@@ -105,9 +109,11 @@ footer {
 @media screen and (min-width: 768px) {
   footer {
     column-count: 4;
+    -webkit-column-count: 4;
   }
   .footer-links {
     -webkit-column-count: 4;
+    column-count: 4;
   }
   .footer-logo-container {
     margin-right: 96px;
@@ -133,6 +139,7 @@ footer {
   }
   .footer-links {
     -webkit-column-count: 4;
+    column-count: 4;
     flex: 1;
   }
   .footer-logo-container {
@@ -165,6 +172,7 @@ footer {
   }
   .footer-links {
     -webkit-column-count: 4;
+    column-count: 4;
     flex: 1;
   }
   .footer-logo-container {

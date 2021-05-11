@@ -130,6 +130,7 @@ table {
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   line-height: 0; }
 
 html,
@@ -188,7 +189,9 @@ header {
 
 main {
   column-count: 3;
+  -webkit-column-count: 3;
   margin: 32px 40px 40px 40px;
+  -webkit-column-gap: 32px;
   column-gap: 32px; }
   main .content {
     display: inline-block;
@@ -306,7 +309,8 @@ footer {
     margin-left: -4px; }
 
 .footer-links {
-  -webkit-column-count: 2; }
+  -webkit-column-count: 2;
+  column-count: 2; }
   .footer-links a {
     display: block;
     margin-bottom: 30px;
@@ -334,6 +338,8 @@ footer {
 
 .input-text {
   width: 180px;
+  font-family: "Lato";
+  color: rgba(29, 31, 36, 0.4);
   height: 35px;
   outline: none;
   line-height: 24px;
@@ -368,9 +374,11 @@ footer {
 
 @media screen and (min-width: 768px) {
   footer {
-    column-count: 4; }
-  .footer-links {
+    column-count: 4;
     -webkit-column-count: 4; }
+  .footer-links {
+    -webkit-column-count: 4;
+    column-count: 4; }
   .footer-logo-container {
     margin-right: 96px; }
   .container-two {
@@ -389,6 +397,7 @@ footer {
     width: 100%; }
   .footer-links {
     -webkit-column-count: 4;
+    column-count: 4;
     flex: 1; }
   .footer-logo-container {
     margin-right: 90px; }
@@ -414,6 +423,7 @@ footer {
     padding: 45px 38px; }
   .footer-links {
     -webkit-column-count: 4;
+    column-count: 4;
     flex: 1; }
   .footer-logo-container {
     margin-right: 140px; }
