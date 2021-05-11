@@ -2,7 +2,6 @@ main {
   column-count: 3;
   margin: 32px 40px 40px 40px;
   column-gap: 32px;
-
   & .content {
     display: inline-block;
     line-height: 40px;
@@ -62,6 +61,7 @@ main {
     column-gap: 16px;
     margin-left: 20px;
     margin-right: 20px;
+    background-color: red;
   }
   .image-container img {
     width: 100%;
@@ -89,12 +89,14 @@ main {
     column-gap: 16px;
     margin-left: 20px;
     margin-right: 20px;
+    background-color: yellow;
   }
   .image-container img {
     width: 100%;
     max-height: 429px;
   }
 }
+
 @media screen and (max-width: 500px) {
   main {
     -moz-column-count: 1;
