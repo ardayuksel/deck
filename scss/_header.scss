@@ -1,0 +1,55 @@
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 34px 40px;
+  max-height: 90px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+
+  & .logo-container {
+    margin-right: 38px;
+  }
+  & .header-main-container {
+    display: flex;
+    width: 100%;
+    padding-top: 2px;
+    justify-content: space-between;
+    & .list-container ul {
+      display: flex;
+      & li {
+        margin-right: 47px;
+        margin-left: 20px;
+        font-size: 14px;
+        font-family: "Oswald";
+        font-weight: bold;
+        color: rgba(29, 31, 36, 0.2);
+      }
+    }
+  }
+}
+
+/*** MEDIA QUERIES ***/
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 34px 22px;
+    & .header-main-container {
+      justify-content: flex-end;
+    }
+    & .list-container {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    max-height: 70px;
+    padding: 25px 22px;
+    & .list-container {
+      visibility: hidden;
+    }
+  }
+}

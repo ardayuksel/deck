@@ -1,0 +1,96 @@
+main {
+  column-count: 3;
+  margin: 32px 40px 40px 40px;
+  column-gap: 32px;
+
+  & .content {
+    display: inline-block;
+    line-height: 40px;
+    margin-bottom: 64px;
+
+    & .image-container {
+      position: relative;
+
+      & .image-description {
+        position: absolute;
+        line-height: 40px;
+        text-align: center;
+        bottom: 40px;
+        width: 137px;
+        left: -4px;
+        font-size: 14px;
+        font-family: "Oswald";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #ff565c;
+      }
+    }
+    & .image-container img {
+      width: 100%;
+    }
+    & .sm {
+      min-height: 200px;
+    }
+    & .big {
+      height: 400px;
+    }
+  }
+
+  .description-container {
+    line-height: 40px;
+  }
+  & h1 {
+    font-size: 26px;
+    margin-top: 22px;
+    font-family: "Lato";
+    color: rgb(29, 31, 36);
+    line-height: 1.154;
+  }
+  & p {
+    margin-top: 23px;
+    font-size: 18px;
+    font-family: "Lato";
+    line-height: 1.556;
+    color: #7a7b7e;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    column-count: 2;
+    column-gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .image-container img {
+    width: 100%;
+    max-height: 429px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    column-count: 2;
+    column-gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .image-container img {
+    width: 100%;
+    max-height: 430px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    column-count: 1;
+    column-gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & .image-container img {
+      width: 100%;
+      max-height: 262px;
+    }
+  }
+}
