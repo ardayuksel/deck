@@ -68,9 +68,10 @@ main {
     max-height: 429px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
   main {
-    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
     column-gap: 16px;
     margin-left: 20px;
     margin-right: 20px;
@@ -81,9 +82,23 @@ main {
   }
 }
 
+@media screen and (max-width: 800px) {
+  main {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .image-container img {
+    width: 100%;
+    max-height: 429px;
+  }
+}
 @media screen and (max-width: 500px) {
   main {
-    column-count: 1;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
     column-gap: 16px;
     margin-left: 20px;
     margin-right: 20px;
