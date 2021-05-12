@@ -356,6 +356,7 @@ footer {
   border: none;
   height: 35px;
   margin-top: 1px;
+  padding-top: 1px;
   background-color: #ff565c;
   color: white; }
 
@@ -366,13 +367,14 @@ footer {
     height: 35px;
     outline: none;
     line-height: 25px;
+    height: 34px;
     padding-left: 10px; }
   .input-button {
     width: 90px;
     margin-left: -6px;
     font-size: 11px;
     border: none;
-    height: 36px;
+    height: 35px;
     padding-top: 3px;
     background-color: #ff565c;
     color: white; } }
@@ -394,7 +396,22 @@ footer {
   .follow-us {
     margin-left: 40px;
     order: 2;
-    margin-top: 6px; } }
+    margin-top: 6px; }
+  .input-text {
+    width: 150px;
+    height: 35px;
+    outline: none;
+    line-height: 25px;
+    padding-left: 10px; }
+  .input-button {
+    width: 90px;
+    margin-left: -6px;
+    font-size: 11px;
+    border: none;
+    height: 35px;
+    padding-top: 1px;
+    background-color: #ff565c;
+    color: white; } }
 
 @media screen and (min-width: 1024px) {
   footer {
