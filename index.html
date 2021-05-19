@@ -22,6 +22,34 @@
       <!------- Header Section Start ------->
       <header>
         <div class="logo-container">
+          <div class="navbar-slider">
+            <div class="close">
+              <span class="right-close-icon" onclick="closeNav()">X</span>
+              <ul>
+                <a href="#">
+                  <li>TECHNOLOGY</li>
+                </a>
+                <a href="#">
+                  <li>IDEAS</li>
+                </a>
+                <a href="#">
+                  <li>LEADERSHIP</li>
+                </a>
+                <a href="#">
+                  <li>VIDEO</li>
+                </a>
+                <a href="#">
+                  <li>NEWS</li>
+                </a>
+                <a href="#">
+                  <li>FINANCE</li>
+                </a>
+                <a href="#">
+                  <li>ENTERTAINMENT</li>
+                </a>
+              </ul>
+            </div>
+          </div>
           <a href="/">
             <svg
               class="header-logo-svg"
@@ -81,7 +109,7 @@
               </a>
             </ul>
           </div>
-          <div class="hamburger-container">
+          <div class="hamburger-container" onclick="openNav()">
             <svg
               class="hamburger-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -348,5 +376,15 @@
       </footer>
       <!------- Footer Section End ------->
     </div>
+
+    <script>
+      function openNav() {
+        document.querySelector(".navbar-slider").style.right = "0px";
+      }
+
+      function closeNav() {
+        document.querySelector(".navbar-slider").style.right = "-100%";
+      }
+    </script>
   </body>
 </html>
