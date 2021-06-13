@@ -162,7 +162,7 @@ header {
     display: flex;
     width: 100%;
     padding-top: 2px;
-    justify-content: space-between; }
+    justify-content: flex-end; }
     header .header-main-container .list-container ul {
       display: flex; }
       header .header-main-container .list-container ul li {
@@ -173,6 +173,7 @@ header {
         font-weight: bold;
         color: rgba(29, 31, 36, 0.2); }
   header .hamburger-container {
+    display: none;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent; }
 
@@ -182,14 +183,15 @@ header {
     position: relative;
     overflow: hidden; }
   .navbar-slider {
-    position: absolute;
+    position: fixed;
     background-color: #1d1f24;
     background-size: cover;
     top: 0;
+    bottom: 0;
     right: -100%;
     height: 100vh;
     width: 100%;
-    transition: 1s;
+    transition: 0.5s;
     display: flex;
     flex-direction: column; }
     .navbar-slider ul {
@@ -227,23 +229,28 @@ header {
       -webkit-tap-highlight-color: transparent; }
       header .close span {
         font-size: 24px;
-        display: block; } }
+        display: block; }
+    header .hamburger-container {
+      display: block;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent; } }
 
 @media screen and (max-width: 500px) {
   .wrapper {
     position: relative;
     overflow: hidden; }
   .navbar-slider {
-    position: absolute;
+    position: fixed;
     background-color: #1d1f24;
-    background-size: cover;
     top: 0;
+    bottom: 0;
     right: -100%;
     height: 100vh;
     width: 100%;
-    transition: 1s;
+    transition: 0.5s;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: hidden; }
     .navbar-slider ul {
       width: 100%;
       display: flex;
@@ -278,17 +285,34 @@ header {
         font-size: 24px;
         display: block; } }
 
+main::before,
+main::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2; }
+
+.content:nth-child(3n + 1) {
+  order: 1; }
+
+.content:nth-child(3n + 2) {
+  order: 2; }
+
+.content:nth-child(3n) {
+  order: 3; }
+
 main {
-  column-count: 3;
-  -webkit-column-count: 3;
-  margin: 32px 40px 40px 40px;
-  -webkit-column-gap: 32px;
-  column-gap: 32px; }
-  main .content {
+  padding: 12px 40px 0px 16px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 2330px; }
+  main a {
     display: inline-block;
-    line-height: 40px;
-    margin-bottom: 64px;
-    margin-left: 4px; }
+    margin: 16px; }
+  main .content {
+    width: 33.33%;
+    margin: 4px; }
     main .content .image-container {
       position: relative; }
       main .content .image-container .image-description {
@@ -325,49 +349,36 @@ main {
     line-height: 1.556;
     color: #7a7b7e; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .content:nth-child(2n + 1) {
+    order: 1;
+    width: 50%; }
+  .content:nth-child(2n) {
+    order: 2;
+    width: 50%; }
+  .content {
+    width: 100%; }
   main {
-    column-count: 2;
-    column-gap: 16px;
-    margin-left: 20px;
-    margin-right: 20px; }
-  .image-container img {
-    width: 100%;
-    max-height: 429px; } }
-
-@media screen and (max-width: 1300px) {
-  main {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-    column-gap: 16px;
-    -webkit-column-gap: 16px;
-    margin-left: 20px;
-    margin-right: 20px; }
-  .image-container img {
-    width: 100%;
-    max-height: 430px; } }
-
-@media screen and (max-width: 800px) {
-  main {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-    column-gap: 16px;
-    margin-left: 20px;
-    margin-right: 20px; }
+    padding: 0;
+    margin: 0;
+    height: 3250px; }
+    main a {
+      margin: 16px;
+      display: inline-block; }
   .image-container img {
     width: 100%;
     max-height: 429px; } }
 
 @media screen and (max-width: 500px) {
   main {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
-    column-gap: 16px;
-    margin-left: 20px;
-    margin-right: 20px; }
+    height: 5760px;
+    margin: 0; }
+    main a {
+      margin: 20px; }
+    main .content:nth-child(n) {
+      margin: 0;
+      order: 1;
+      width: 100%; }
     main .image-container img {
       width: 100%;
       max-height: 262px; }

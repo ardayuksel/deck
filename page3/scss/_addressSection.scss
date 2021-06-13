@@ -1,0 +1,84 @@
+.address-section {
+  height: 210px;
+  .address-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px;
+    .address-col {
+      margin-right: 246px;
+      h1 {
+        width: 100px;
+        margin-bottom: 28px;
+        font-size: 14px;
+        font-family: "Oswald";
+        font-weight: 600;
+        color: rgb(255, 86, 92);
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      h2 {
+        width: 230px;
+        font-size: 24px;
+        font-family: "Lato";
+        color: rgb(29, 31, 36);
+        line-height: 1.25;
+        text-align: left;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .address-section {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .address-row {
+      width: 100%;
+      flex-direction: row;
+      padding-top: 52px;
+      padding-left: 20px;
+      padding-bottom: 52px;
+      overflow: hidden;
+      .address-col {
+        margin-right: 24px;
+        flex-wrap: wrap;
+        h1 {
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-weight: 500;
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:500px) {
+  .address-section {
+    min-height: 380px;
+    .address-row {
+      flex-direction: column;
+      padding: 52px 20px;
+      .address-col {
+        margin-right: 0px;
+        h1 {
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-weight: 500;
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+}
+.google-map-container {
+  height: 440px;
+  width: 100%;
+}
+#googleMap {
+  height: 100%;
+  width: 100%;
+}

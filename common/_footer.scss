@@ -64,25 +64,27 @@ footer {
     margin-right: 10px;
   }
 }
-.input-text {
-  width: 180px;
-  font-family: "Lato";
-  color: rgba(29, 31, 36, 0.4);
-  height: 35px;
-  outline: none;
-  line-height: 24px;
-  padding-left: 10px;
-}
 
-.input-button {
-  width: 120px;
-  margin-left: -6px;
-  border: none;
-  height: 35px;
-  margin-top: 1px;
-  padding-top: 1px;
-  background-color: #ff565c;
-  color: white;
+.footer-input-container {
+  .input-button {
+    width: 120px;
+    margin-left: -6px;
+    border: none;
+    height: 35px;
+    margin-top: 1px;
+    padding-top: 2px;
+    background-color: #ff565c;
+    color: white;
+  }
+  .input-text {
+    width: 180px;
+    font-family: "Lato";
+    color: rgba(29, 31, 36, 0.4);
+    height: 35px;
+    outline: none;
+    line-height: 24px;
+    padding-left: 10px;
+  }
 }
 
 /*** MEDIA QUERIES ***/
